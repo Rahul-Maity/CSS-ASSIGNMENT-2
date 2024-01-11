@@ -1,0 +1,124 @@
+:root {
+  --yellow: #eade37;
+  --purple: #80007E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container-1 {
+  background-color: var(--yellow);
+  display: inline-block;
+  height: 100vh;
+  width: 25vw;
+}
+
+.course-container {
+  box-sizing: border-box;
+  margin: 2rem;
+  height: 21rem;
+  width: 23rem;
+}
+.course-container .course {
+  height: 2.5rem;
+  width: 77%;
+  margin: 0.6rem 2rem;
+}
+.course-container .course p {
+  display: inline-block;
+  background-color: white;
+  height: 100%;
+  width: 90%;
+  text-align: start;
+  font-size: 1.2rem;
+}
+.course-container .course p span {
+  display: inline-block;
+  padding: 9px;
+  color: var(--purple);
+  font-family: Georgia, serif;
+}
+.course-container .course:nth-child(even) {
+  background-color: #0000FF;
+}
+.course-container .course:nth-child(odd) {
+  background-color: #FF7F00;
+}
+
+.container-1 .course #html,
+.container-1 .course #css,
+.container-1 .course #js,
+.container-1 .course #php {
+  margin-top: -21px;
+}
+
+.container-2 {
+  background-color: var(--yellow);
+  display: inline-block;
+  height: 100vh;
+  width: 75vw;
+  margin-top: 0px;
+  position: absolute;
+}
+.container-2 main p {
+  margin-top: 31px;
+  font-weight: 500;
+  color: var(--purple);
+  font-size: 1.1rem;
+  font-family: auto;
+}
+.container-2 section {
+  margin-top: 2rem;
+}
+.container-2 section div {
+  margin-bottom: 20px;
+  height: 3rem;
+  width: 80%;
+  padding: 14px 10px;
+}
+.container-2 section #section-first {
+  font-size: 20px;
+  border: 2px dashed black;
+}
+.container-2 section #section-second {
+  font-style: italic;
+  font-size: 20px;
+  text-align: end;
+  border: 2px dashed red;
+  transition: transform 0.3s ease-out;
+}
+.container-2 section #section-second:hover {
+  transform: scale(1.04);
+}
+.container-2 section #section-third {
+  font-size: 20px;
+  font-weight: 550;
+  text-align: center;
+  border: 2px dotted black;
+}
+.container-2 footer {
+  margin-top: 50px;
+  font-size: 16px;
+  color: var(--purple);
+  font-style: italic;
+  font-weight: 550;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.content-container {
+  margin: 1.2rem 0rem;
+}
+
+header {
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--purple);
+}
+
+.break-line {
+  margin-top: 5rem;
+  border: 1px dotted var(--purple);
+}/*# sourceMappingURL=styling.css.map */

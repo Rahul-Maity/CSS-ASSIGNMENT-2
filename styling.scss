@@ -1,0 +1,165 @@
+
+
+
+
+// Define color variables in :root for easy access and modification
+:root {
+    --yellow: #eade37;   // Primary color
+    --purple: #80007E;   // Secondary color
+}
+
+// Resetting default margin, padding, and box-sizing for all elements
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Define a mixin for common container formatting
+@mixin container-format {
+    display: inline-block;//Using inline block so that the container does not prevent the another container to flow in it's side by side
+    height: 100vh;
+}
+
+// Styling for the first container
+.container-1 {
+    background-color: var(--yellow); // Apply primary color
+    @include container-format;      // Use mixin for common container formatting
+    width: 25vw;
+}
+
+// Styling for the course container
+.course-container {
+    box-sizing: border-box;
+    margin: 2rem;
+    height: 21rem;
+    width: 23rem;
+
+    // Styling for individual courses within the container
+    .course {
+        height: 2.5rem;
+        width: 77%;
+        margin:0.6rem 2rem;
+
+        // Styling for the content inside each course
+        p {
+            display: inline-block;
+            background-color: white;
+            height: 100%;
+            width: 90%;
+            text-align: start;
+            font-size: 1.2rem;
+
+            // Styling for the span element within the paragraph
+            span {
+                display: inline-block;
+                padding: 9px;
+                color: var(--purple);  // Use secondary color for text
+                font-family: Georgia, serif;
+            }
+        }
+    }
+
+    // Styling for alternating courses
+    .course:nth-child(even) {
+        background-color: #0000FF;  // Blue background for even courses
+    }
+
+    .course:nth-child(odd) {
+        background-color: #FF7F00;  // Orange background for odd courses
+    }
+}
+
+// Styling for specific courses within the first container
+.container-1 .course #html,
+.container-1 .course #css,
+.container-1 .course #js,
+.container-1 .course #php {
+    margin-top: -21px;  // Adjust margin for specific courses
+}
+
+// Styling for the second container
+.container-2 {
+    background-color: var(--yellow); // Apply primary color
+    @include container-format;      // Use mixin for common container formatting
+    width: 75vw;
+    margin-top: 0px;
+    position: absolute;
+
+    // Styling for the main content within the second container
+    main p {
+        margin-top: 31px;
+        font-weight: 500;
+        color: var(--purple);  // Use secondary color for text
+        font-size: 1.1rem;
+        font-family: auto;
+    }
+
+    // Styling for sections within the second container
+    section {
+        margin-top: 2rem;
+
+        div {
+            margin-bottom: 20px;
+            height: 3rem;
+            width: 80%;
+            padding: 14px 10px;
+        }
+
+        #section-first {
+            font-size: 20px;
+            border: 2px dashed black;
+        }
+
+        #section-second {
+            font-style: italic;
+            font-size: 20px;
+            text-align: end;
+            border: 2px dashed red;
+
+            // Hover effect using transform
+            transition: transform 0.3s ease-out;
+            &:hover {
+                transform: scale(1.04);
+            }
+        }
+
+        #section-third {
+            font-size: 20px;
+            font-weight: 550;
+            text-align: center;
+            border: 2px dotted black;
+        }
+    }
+
+    // Styling for the footer within the second container
+    footer {
+        margin-top: 50px;
+        font-size: 16px;
+        color: var(--purple);  // Use secondary color for text
+        font-style: italic;
+        font-weight: 550;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+}
+
+// Styling for the content container
+.content-container {
+    margin: 1.2rem 0rem;
+}
+
+// Styling for the header element
+header {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--purple);  // Use secondary color for text
+}
+
+// Styling for a dotted line break
+.break-line {
+    margin-top: 5rem;
+    border: 1px dotted var(--purple);  // Use secondary color for border
+}
+
+
+
